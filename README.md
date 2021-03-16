@@ -4,5 +4,5 @@ In this repo, I will keep trace of all my solutions of the [Advent of Code event
 Some solutions are completely from scratch, some other are inspired from the insanely good solutions of [@norvig](https://github.com/norvig)\
 Feel free to judge me for my (bad) code.
 
-## WIP - 2016 refactoring
-This event's code is going to be refactored. Final result should be a single Colab Notebook with all solutions (like 2020 file). Until then, solutions will be split between `AoC_2016.ipynb` file and `code` folder
+## WIP - AoC 2015
+Final aim is to complete all years, obviously! Since I wanted to master my C++ lately, I will go for solutions with this language for 2015 event. Let's see how far I can go!
