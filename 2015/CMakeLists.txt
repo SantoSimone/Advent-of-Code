@@ -21,4 +21,8 @@ add_executable(Day2
 )
 target_link_libraries(Day2 PUBLIC utils_lib)
 
+add_executable(Day3 
+    src/day_3.cpp
+)
+target_link_libraries(Day3 PUBLIC utils_lib)
 
