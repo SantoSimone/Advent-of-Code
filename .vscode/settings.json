@@ -51,6 +51,7 @@
         "xtree": "cpp",
         "xutility": "cpp",
         "algorithm": "cpp",
-        "numeric": "cpp"
+        "numeric": "cpp",
+        "set": "cpp"
     }
 }
