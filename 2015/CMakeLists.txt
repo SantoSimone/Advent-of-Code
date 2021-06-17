@@ -9,7 +9,11 @@ add_library(utils_lib
     common/utils.h
     common/utils.cpp
 )
-target_include_directories(utils_lib PUBLIC common/)
+target_include_directories(utils_lib 
+    PUBLIC 
+    common/
+    eigen/
+    )
 
 add_executable(Day1 
     src/day_1.cpp
@@ -30,3 +34,8 @@ add_executable(Day5
     src/day_5.cpp
 )
 target_link_libraries(Day5 PUBLIC utils_lib)
+
+add_executable(Day6 
+    src/day_6.cpp
+)
+target_link_libraries(Day6 PUBLIC utils_lib)
