@@ -7,7 +7,7 @@
 #include <Eigen/Dense>
 #include <Eigen/Core>
 
-void d5p1(const std::vector<std::string> &lines)
+void d6p1(const std::vector<std::string> &lines)
 {
     Eigen::MatrixXi lights(1000, 1000);
     lights.setConstant(0);
@@ -40,7 +40,7 @@ void d5p1(const std::vector<std::string> &lines)
     return;
 }
 
-void d5p2(const std::vector<std::string> &lines)
+void d6p2(const std::vector<std::string> &lines)
 {
     Eigen::MatrixXi lights(1000, 1000);
     lights.setConstant(0);
@@ -82,6 +82,6 @@ int main()
 {
     int day{6};
     const std::vector<std::string> lines{utils::getInputAsLines(day)};
-    d5p1(lines);
-    d5p2(lines);
+    d6p1(lines);
+    d6p2(lines);
 }
