@@ -5,18 +5,13 @@ from python_utils import parse_ints, get_input
 
 def d1p1(day: int):
     values = parse_ints(get_input(day=day, year=2021))
-    increases = np.sum(
-        [values[i - 1] < values[i] for i in range(1, len(values))]
-    )
+    increases = np.sum(np.diff(values) > 0)
     print(f"Number of increases is {increases}")
 
 
 def d1p2(day: int):
-    values = parse_ints(get_input(day=day, year=2021))
-    increases = np.sum(
-        [np.sum(values[i - 3:i]) < np.sum(values[i - 2:i + 1])
-         for i in range(3, len(values))]
-    )
+    values = np.array(parse_ints(get_input(day=day, year=2021)))
+    increases = np.sum((values[:-3] - values[3:]) < 0)
     print(f"Number of increases is {increases}")
 
 
