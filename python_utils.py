@@ -10,7 +10,7 @@ import copy
 
 def get_input(day, year):
     return urllib.request.urlopen(f'https://raw.githubusercontent.com/SantoSimone'
-                                  f'/Advent-of-Code/master/{year}/input_files/input'
+                                  f'/Advent-of-Code/2021/{year}/input_files/input'
                                   f'{day}.txt').read().decode('utf-8')
 
 
