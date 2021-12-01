@@ -1,2 +1,4 @@
 2015/build/*
 *code/*
+*.idea*
+*.vscode*
