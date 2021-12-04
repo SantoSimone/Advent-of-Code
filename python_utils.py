@@ -32,4 +32,8 @@ def splitter(list_to_split, split_val):
             continue
         curr.append(val)
 
+    if len(curr) > 0:
+        curr.pop(-1)
+        ret.append(curr)
+
     return ret
