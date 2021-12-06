@@ -3,15 +3,15 @@ from typing import List, Tuple
 
 import numpy as np
 
-from python_utils import get_input_as_lines, splitter
+from python_utils import get_input_as_lines, splitter, parse_ints
 
 
 def parse_inputs(lines: List[str]) -> Tuple[map, List[np.ndarray]]:
-    drawn_numbers = list(map(int, re.findall(r'\d+', lines[0])))
+    drawn_numbers = parse_ints(lines[0])
     boards = splitter(lines[2:], '')
     boards = [
         np.array(
-            [list(map(int, re.findall(r'\d+', line))) for line in board]
+            [parse_ints(line) for line in board]
         )
         for board in boards
     ]
