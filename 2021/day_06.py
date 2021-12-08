@@ -25,7 +25,7 @@ class Lanternfish:
 
 
 def d6p1(input_text: str, num_days: int):
-    # I decided to keep this solution even if it not scalable
+    # I decided to keep this solution even if it is not scalable
     fishes = [Lanternfish(i) for i in parse_ints(input_text)]
     for day in range(num_days):
         add = 0
