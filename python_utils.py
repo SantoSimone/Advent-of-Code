@@ -33,7 +33,8 @@ def splitter(list_to_split, split_val):
         curr.append(val)
 
     if len(curr) > 0:
-        curr.pop(-1)
+        if len(curr[-1]) < 1:
+            curr.pop(-1)
         ret.append(curr)
 
     return ret
