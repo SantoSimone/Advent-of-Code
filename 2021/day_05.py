@@ -1,9 +1,8 @@
-import re
-from typing import List, Tuple
+from typing import List
 
 import numpy as np
 
-from python_utils import get_input_as_lines, splitter, parse_ints
+from python_utils import get_input_as_lines, parse_ints
 
 
 def d5p1(lines: List[str]):

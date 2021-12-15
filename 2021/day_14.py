@@ -1,13 +1,10 @@
 import collections
 import copy
-import itertools
 import re
 from collections import defaultdict
-from typing import List, Tuple, Dict, Optional
+from typing import List
 
-import numpy as np
-
-from python_utils import get_input_as_lines, splitter, parse_ints, get_input
+from python_utils import get_input_as_lines, splitter
 import more_itertools
 
 

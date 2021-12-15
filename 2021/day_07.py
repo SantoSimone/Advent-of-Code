@@ -1,10 +1,6 @@
-import re
-from collections import defaultdict
-from typing import List, Tuple
-
 import numpy as np
 
-from python_utils import get_input_as_lines, splitter, parse_ints, get_input
+from python_utils import parse_ints, get_input
 
 
 def d7p1(input_text: str):

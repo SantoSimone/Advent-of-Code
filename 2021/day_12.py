@@ -1,11 +1,6 @@
-import itertools
-import re
 from collections import defaultdict
-from typing import List, Tuple, Dict, Optional
-
-import numpy as np
-
-from python_utils import get_input_as_lines, splitter, parse_ints, get_input
+from typing import List, Dict, Optional
+from python_utils import get_input_as_lines
 
 
 def parse_paths(lines: List[str]) -> Dict[str, List[str]]:

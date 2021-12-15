@@ -1,11 +1,7 @@
 import itertools
 import re
-from collections import defaultdict
-from typing import List, Tuple, Dict
-
-import numpy as np
-
-from python_utils import get_input_as_lines, splitter, parse_ints, get_input
+from typing import List, Dict
+from python_utils import get_input_as_lines
 
 
 def count_in_line(line: str) -> int:
