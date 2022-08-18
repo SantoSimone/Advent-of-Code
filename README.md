@@ -6,3 +6,6 @@ Feel free to judge me for my (bad) code.
 
 ## 🚧 WIP - AoC 2015
 Final aim is to complete all years, obviously! Since I wanted to master my C++ lately, I will go for solutions with this language for 2015 event. Let's see how far I can go!
+
+## 🚧 WIP - AoC 2021
+AoC 2021 branch is (almost) complete, day 19 and 23 will be solved ASAP.
