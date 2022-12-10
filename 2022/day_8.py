@@ -1,12 +1,9 @@
-import dataclasses
-import heapq
 import re
 from typing import List
 
 import numpy as np
 
 import python_utils
-from collections import defaultdict, namedtuple
 
 
 def d8p1(lines: List[str]):

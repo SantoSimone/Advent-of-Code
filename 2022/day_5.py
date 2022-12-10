@@ -16,7 +16,7 @@ def d5p1(lines: List[str]):
         num, src, dst = map(int, re.findall(r'\d+', cmd))
         to_move = [stacks[src].pop() for _ in range(num)]
         stacks[dst].extend(to_move)
-        
+
     return [s[-1:] for s in stacks.values()]
 
 

@@ -1,10 +1,7 @@
-import dataclasses
-import heapq
-import re
+from collections import defaultdict
 from typing import List
 
 import python_utils
-from collections import defaultdict, namedtuple
 
 
 def tree(): return defaultdict(tree)

@@ -1,6 +1,5 @@
-import re
-from collections import defaultdict
 from collections import deque
+
 import python_utils
 
 
