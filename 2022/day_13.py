@@ -1,15 +1,9 @@
 import functools
 import itertools
-import operator
-import queue
-import re
-from collections import deque
+import json
 from typing import List, Union
 
-import numpy as np
-
 import python_utils
-import json
 
 
 def compare(lhs: Union[int, List], rhs: Union[int, List]) -> int:
