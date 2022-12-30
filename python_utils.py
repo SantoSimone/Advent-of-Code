@@ -1,25 +1,18 @@
-import numpy as np
-import urllib.request
 import re
-import collections
-import itertools
-import heapq
-import functools
-import copy
+from pathlib import Path
 
 
 def get_input(day, year):
-    return urllib.request.urlopen(f'https://raw.githubusercontent.com/SantoSimone'
-                                  f'/Advent-of-Code/2022/{year}/input_files/input'
-                                  f'{day}.txt').read().decode('utf-8')
+    with open(Path(__file__).parent / f"{year}" / "input_files" / f"input{day}.txt", 'r') as input_file:
+        return input_file.read().strip()
 
 
 def get_input_as_lines(day, year):
-    return get_input(day, year).split('\n')[:-1]
+    return get_input(day, year).split('\n')
 
 
 def parse_ints(text):
-    return [int(x) for x in re.findall(r'\d+', text)]
+    return [int(x) for x in re.findall(r'-?\d+', text)]
 
 
 def splitter(list_to_split, split_val):
