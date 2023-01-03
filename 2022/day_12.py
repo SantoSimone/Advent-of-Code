@@ -24,7 +24,7 @@ def d12p1(lines: List[str]):
             end_pos = (i, p)
             grid[i, p] = ord('z') - ord('a')
 
-    # Every element of the queue will be: number of steps, distance from the end, visited positions, current position
+    # Every element of the queue will be: number of steps, current position
     q = deque()
     q.append((0, start_pos))
     h, w = grid.shape
