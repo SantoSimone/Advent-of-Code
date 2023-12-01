@@ -3,3 +3,4 @@
 *.idea*
 *.vscode*
 *.pyc
+*input_files*
