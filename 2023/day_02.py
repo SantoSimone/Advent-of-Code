@@ -1,10 +1,8 @@
 import collections
-import operator
 import re
+from typing import List
 
 import numpy as np
-import regex
-from typing import List
 
 import python_utils
 
@@ -13,7 +11,6 @@ def parse_games(lines: List[str]):
     games = []
     for line in lines:
         game_string, cubes_string = line.split(':')
-        game_id = int(re.findall('\d+', game_string)[0])
         games.append([
             {
                 cubes_color: int(cubes_num)
