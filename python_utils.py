@@ -71,13 +71,20 @@ def full_setup():
         input_str = "txt = python_utils.get_input(day, year)"
 
     os.makedirs(f'{year}/input_files', exist_ok=True)
-    with open(Path(__file__).parent / f"{year}" / "input_files" / f"day_{day.zfill(2)}.py", 'w') as f:
+    with open(Path(__file__).parent / f"{year}" / f"day_{day.zfill(2)}.py", 'w') as f:
         f.write(
-            f"""def d{day}p1({param_str}):
+            f"""from typing import List
+            
+import python_utils
+
+
+def d{day}p1({param_str}):
     return None
+
 
 def d{day}p2({param_str}):
     return None
+
 
 if __name__ == '__main__':
     day, year = {day}, {year}
