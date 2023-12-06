@@ -23,9 +23,12 @@ def d6p1(lines: List[str]):
 
 def d6p2(lines: List[str]):
     # Few seconds of waiting time, I'm okay with it
+    # EDIT: but I wanted to find a proper solution :)
     race_time = python_utils.parse_ints(lines[0].replace(' ', ''))[0]
     race_distance = python_utils.parse_ints(lines[1].replace(' ', ''))[0]
-    return get_wins(race_time, race_distance)
+    min_time = int((race_time - np.sqrt(race_time ** 2 - 4 * race_distance)) / 2)
+    max_time = int((race_time + np.sqrt(race_time ** 2 - 4 * race_distance)) / 2)
+    return max_time - min_time
 
 
 if __name__ == '__main__':
