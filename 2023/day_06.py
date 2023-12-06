@@ -34,7 +34,5 @@ def d6p2(lines: List[str]):
 if __name__ == '__main__':
     day, year = 6, 2023
     lines = python_utils.get_input_as_lines(day, year)
-    #     lines = """Time:      7  15   30
-    # Distance:  9  40  200""".splitlines()
     print(f'Part 1: {d6p1(lines)}')
     print(f'Part 2: {d6p2(lines)}')
