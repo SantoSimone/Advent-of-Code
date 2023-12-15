@@ -64,9 +64,11 @@ def full_setup():
     if year == '':
         year = str(today.year)
     if input_type.lower() in ['', 'y']:
+        input_param = "lines"
         param_str = "lines: List[str]"
         input_str = "lines = python_utils.get_input_as_lines(day, year)"
     else:
+        input_param = "txt"
         param_str = "input_text: str"
         input_str = "txt = python_utils.get_input(day, year)"
 
@@ -89,8 +91,8 @@ def d{day}p2({param_str}):
 if __name__ == '__main__':
     day, year = {day}, {year}
     {input_str}
-    print(f'Part 1: {{d{day}p1(lines)}}')
-    print(f'Part 2: {{d{day}p2(lines)}}')
+    print(f'Part 1: {{d{day}p1({input_param})}}')
+    print(f'Part 2: {{d{day}p2({input_param})}}')
 """)
 
     setup_day(day, year)
