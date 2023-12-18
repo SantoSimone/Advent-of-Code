@@ -62,7 +62,7 @@ def find_loop(start_pos: Tuple[int, int], grid: Dict[Tuple[int, int], Tuple[Tupl
                 continue
             to_visit.put((curr_steps + 1, neigh))
 
-    return distances
+    return distances, curr_pos
 
 
 def find_start_pipe(start_pos: Tuple[int, int], grid: Dict) -> Tuple[int, int]:
@@ -83,22 +83,58 @@ def find_start_pipe(start_pos: Tuple[int, int], grid: Dict) -> Tuple[int, int]:
 def d10p1(lines: List[str]):
     grid, start_pos = parse_grid(lines)
     grid[start_pos] = find_start_pipe(start_pos, grid)
-    distances = find_loop(start_pos, grid)
+    distances, loop_pos = find_loop(start_pos, grid)
 
     return max(v for v in distances.values())
 
 
+def get_vertices(start_pos: Tuple[int, int], grid):
+    to_visit = [start_pos]
+    visited = {start_pos}
+    vertices = []
+    vertices_neighbors = {v for k, v in PIPES.items() if k in 'JFL7'}
+    while len(to_visit) > 0:
+        curr_pos = to_visit.pop()
+        if grid[curr_pos] in vertices_neighbors:
+            if curr_pos in vertices:
+                break
+            vertices.append(curr_pos)
+
+        visited.add(curr_pos)
+        for neigh in get_neigh(curr_pos, grid):
+            if neigh in visited:
+                continue
+            to_visit.append(neigh)
+
+    return vertices
+
+
+def area_and_perimeter(vertices: List[Tuple[int, int]]) -> Tuple[int, int]:
+    # Vertices should be in the form (y, x)
+    # Area is defined as the summation in i of curr_y * (prev_x - next_x) / 2
+    n = len(vertices)
+    area = 0
+    perimeter = 0
+    for i, (curr_y, curr_x) in enumerate(vertices):
+        next_y, next_x = vertices[(i + 1) % n]
+        perimeter += abs(curr_x - next_x) + abs(curr_y - next_y)
+        area += (curr_y + next_y) * (next_x - curr_x)
+
+    return abs(area) // 2, perimeter
+
+
 def d10p2(lines: List[str]):
-    return None
+    grid, start_pos = parse_grid(lines)
+    grid[start_pos] = find_start_pipe(start_pos, grid)
+    distances, loop_pos = find_loop(start_pos, grid)
+    vertices = get_vertices(loop_pos, grid)
+    area, perimeter = area_and_perimeter(vertices)
+
+    return area - perimeter // 2 + 1
 
 
 if __name__ == '__main__':
     day, year = 10, 2023
     lines = python_utils.get_input_as_lines(day, year)
-    #     lines = """..F7.
-    # .FJ|.
-    # SJ.L7
-    # |F--J
-    # LJ...""".splitlines()
     print(f'Part 1: {d10p1(lines)}')
     print(f'Part 2: {d10p2(lines)}')
