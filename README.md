@@ -5,8 +5,14 @@ Some solutions are completely from scratch, some other are inspired from the ins
 of [@norvig](https://github.com/norvig)\
 Feel free to judge me for my (bad) code.
 
-## WIP - Missing days
+## Completion
 
-- A huge chunk of 2015 (c++ learning path)
-- 2021: Day 19 and 23
-- 2022: Day 16 - 19 - 22
+- :christmas_tree: 2023
+- :construction: 2022 (days 16 - 19 - 22)
+- :construction: 2021 (days 19 - 23)
+- :christmas_tree: 2020
+- :soon: 2019
+- :soon: 2018
+- :construction: 2017 (way too many days)
+- :christmas_tree: 2016
+- :construction: 2015 (way too many days)
