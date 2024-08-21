@@ -10,4 +10,3 @@ Feel free to judge me for my (bad) code.
 - A huge chunk of 2015 (c++ learning path)
 - 2021: Day 19 and 23
 - 2022: Day 16 - 19 - 22
-- 2023: Day 20 (part 2) - 21 (part 2) - 22 - 25
