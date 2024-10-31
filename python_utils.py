@@ -2,7 +2,7 @@ import datetime
 import os
 import re
 from pathlib import Path
-from typing import Union, Iterable
+from typing import Union, Iterable, List
 
 import requests
 
@@ -58,6 +58,20 @@ def splitter(list_to_split, split_val):
         ret.append(curr)
 
     return ret
+
+
+def ravel_list(l: List):
+    """
+    Ravel any nested list into a flat list
+
+    :param l: any list with any level of nesting
+    :return: a flat list of items
+    """
+    for item in l:
+        if isinstance(item, list):
+            yield from ravel_list(item)
+        else:
+            yield item
 
 
 def full_setup():
