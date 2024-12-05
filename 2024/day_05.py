@@ -5,6 +5,9 @@ import python_utils
 
 
 def d5p1(lines: List[str]):
+    # Define the conditions as a dictionary: int -> list of ints
+    # Key check is in the if statement
+
     ordering, to_produce = python_utils.splitter(lines, '')
     condition = collections.defaultdict(list)
     for line in ordering:
@@ -24,6 +27,10 @@ def d5p1(lines: List[str]):
 
 
 def d5p2(lines: List[str]):
+    # Find the wrong ones by adapting part 1
+    # For each wrong, re-create the line by incrementally add the one for which all conditions numbers are already
+    # present in the new line (or do not belong to line)
+
     ordering, to_produce = python_utils.splitter(lines, '')
     condition = collections.defaultdict(list)
     for line in ordering:
