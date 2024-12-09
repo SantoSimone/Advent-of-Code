@@ -35,11 +35,18 @@ def parse_ints(text: str):
     return [int(x) for x in re.findall(r'-?\d+', text)]
 
 
-def multiply(a: Iterable):
+def multiply(arr: Iterable):
     res = 1
-    for v in a:
+    for v in arr:
         res *= v
     return res
+
+
+def cumsum(arr: Iterable):
+    tot = 0
+    for v in arr:
+        tot += v
+        yield tot
 
 
 def splitter(list_to_split, split_val):
