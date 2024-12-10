@@ -2,7 +2,7 @@ import datetime
 import os
 import re
 from pathlib import Path
-from typing import Union, Iterable, List
+from typing import Union, Iterable, List, Tuple
 
 import requests
 
@@ -47,6 +47,24 @@ def cumsum(arr: Iterable):
     for v in arr:
         tot += v
         yield tot
+
+
+# down, left, up, right
+DIRS = ((1, 0), (0, -1), (-1, 0), (0, 1))
+
+
+def grid_neighbors(pos: Tuple[int, int], directions: Iterable[Tuple[int, int]] = DIRS) -> Iterable[Tuple[int, int]]:
+    """ Helper function for classic grid problems where neighbors should be computed.
+     Default behaviour computes the 4 neighbors with no diagonal directions.
+
+    :param pos: position from which neighbors will be computed - (y, x) format
+    :param directions: all possible directions where neighbor could be
+    :return: an iterable of all the possible neighbors
+    """
+
+    y, x = pos
+    for dir_y, dir_x in DIRS:
+        yield y + dir_y, x + dir_x
 
 
 def splitter(list_to_split, split_val):
