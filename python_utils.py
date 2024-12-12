@@ -2,7 +2,7 @@ import datetime
 import os
 import re
 from pathlib import Path
-from typing import Union, Iterable, List, Tuple
+from typing import Union, Iterable, List, Tuple, Dict
 
 import requests
 
@@ -33,6 +33,15 @@ def get_input_as_lines(day, year):
 
 def parse_ints(text: str):
     return [int(x) for x in re.findall(r'-?\d+', text)]
+
+
+def parse_grid(lines: List[str]) -> Dict[Tuple[int, int], str]:
+    """Helper function to parse a grid from a list of lines - (y, x) format"""
+    return {
+        (i, j): c
+        for i, line in enumerate(lines)
+        for j, c in enumerate(line)
+    }
 
 
 def multiply(arr: Iterable):
