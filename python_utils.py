@@ -72,7 +72,7 @@ def grid_neighbors(pos: Tuple[int, int], directions: Iterable[Tuple[int, int]] =
     """
 
     y, x = pos
-    for dir_y, dir_x in DIRS:
+    for dir_y, dir_x in directions:
         yield y + dir_y, x + dir_x
 
 

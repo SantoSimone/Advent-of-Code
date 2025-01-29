@@ -75,12 +75,5 @@ def d7p2(lines: List[str]):
 if __name__ == '__main__':
     day, year = 7, 2018
     lines = python_utils.get_input_as_lines(day, year)
-    #     lines = """Step C must be finished before step A can begin.
-    # Step C must be finished before step F can begin.
-    # Step A must be finished before step B can begin.
-    # Step A must be finished before step D can begin.
-    # Step B must be finished before step E can begin.
-    # Step D must be finished before step E can begin.
-    # Step F must be finished before step E can begin.""".splitlines()
     print(f'Part 1: {d7p1(lines)}')
     print(f'Part 2: {d7p2(lines)}')
